@@ -1,0 +1,26 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>band 1 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="2">
+    <Description>band 2 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="3">
+    <Description>band 3 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="4">
+    <Description>band 4 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="5">
+    <Description>band 5 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="6">
+    <Description>band 7 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="7">
+    <Description>band 6 temperature</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="8">
+    <NoDataValue>2.55000000000000E+02</NoDataValue>
+  </PAMRasterBand>
+</PAMDataset>
