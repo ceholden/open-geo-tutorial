@@ -4,3 +4,4 @@ numpy>=1.8.1
 scipy>=0.14.0
 scikit-learn==0.15.0
 ipython>=2.1.0
+pandas>=0.14.1
