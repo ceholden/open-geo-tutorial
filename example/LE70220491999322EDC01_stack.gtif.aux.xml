@@ -1,26 +1,84 @@
 <PAMDataset>
+  <Metadata>
+    <MDI key="Band_1">band 1 reflectance</MDI>
+    <MDI key="Band_2">band 2 reflectance</MDI>
+    <MDI key="Band_3">band 3 reflectance</MDI>
+    <MDI key="Band_4">band 4 reflectance</MDI>
+    <MDI key="Band_5">band 5 reflectance</MDI>
+    <MDI key="Band_6">band 7 reflectance</MDI>
+    <MDI key="Band_7">band 6 temperature</MDI>
+    <MDI key="Band_8">Band 8</MDI>
+  </Metadata>
   <PAMRasterBand band="1">
     <Description>band 1 reflectance</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">1810</MDI>
+      <MDI key="STATISTICS_MEAN">439.015984</MDI>
+      <MDI key="STATISTICS_MINIMUM">198</MDI>
+      <MDI key="STATISTICS_STDDEV">139.7168287663</MDI>
+    </Metadata>
   </PAMRasterBand>
   <PAMRasterBand band="2">
     <Description>band 2 reflectance</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">2294</MDI>
+      <MDI key="STATISTICS_MEAN">661.54288</MDI>
+      <MDI key="STATISTICS_MINIMUM">315</MDI>
+      <MDI key="STATISTICS_STDDEV">180.78985343571</MDI>
+    </Metadata>
   </PAMRasterBand>
   <PAMRasterBand band="3">
     <Description>band 3 reflectance</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">2820</MDI>
+      <MDI key="STATISTICS_MEAN">589.379808</MDI>
+      <MDI key="STATISTICS_MINIMUM">160</MDI>
+      <MDI key="STATISTICS_STDDEV">270.70755024913</MDI>
+    </Metadata>
   </PAMRasterBand>
   <PAMRasterBand band="4">
     <Description>band 4 reflectance</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">5138</MDI>
+      <MDI key="STATISTICS_MEAN">3442.297712</MDI>
+      <MDI key="STATISTICS_MINIMUM">1105</MDI>
+      <MDI key="STATISTICS_STDDEV">461.05944906873</MDI>
+    </Metadata>
   </PAMRasterBand>
   <PAMRasterBand band="5">
     <Description>band 5 reflectance</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">4548</MDI>
+      <MDI key="STATISTICS_MEAN">2181.928672</MDI>
+      <MDI key="STATISTICS_MINIMUM">353</MDI>
+      <MDI key="STATISTICS_STDDEV">427.10099628111</MDI>
+    </Metadata>
   </PAMRasterBand>
   <PAMRasterBand band="6">
     <Description>band 7 reflectance</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">3705</MDI>
+      <MDI key="STATISTICS_MEAN">1049.99384</MDI>
+      <MDI key="STATISTICS_MINIMUM">145</MDI>
+      <MDI key="STATISTICS_STDDEV">375.11543521702</MDI>
+    </Metadata>
   </PAMRasterBand>
   <PAMRasterBand band="7">
     <Description>band 6 temperature</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">3546</MDI>
+      <MDI key="STATISTICS_MEAN">2678.677184</MDI>
+      <MDI key="STATISTICS_MINIMUM">2335</MDI>
+      <MDI key="STATISTICS_STDDEV">158.66755034924</MDI>
+    </Metadata>
   </PAMRasterBand>
   <PAMRasterBand band="8">
     <NoDataValue>2.55000000000000E+02</NoDataValue>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">0</MDI>
+      <MDI key="STATISTICS_MEAN">0</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">0</MDI>
+    </Metadata>
   </PAMRasterBand>
 </PAMDataset>
