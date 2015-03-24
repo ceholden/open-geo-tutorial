@@ -1,0 +1,6 @@
+---
+title: 'Chapter 3: Visualization'
+author: "Chris Holden"
+date: "03/24/2015"
+output: html_document
+---

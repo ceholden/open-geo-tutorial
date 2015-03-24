@@ -1,0 +1,43 @@
+---
+title: "Introduction"
+author: "Chris Holden"
+date: "03/24/2015"
+output: html_document
+---
+
+Tutorial of basic remote sensing and GIS methodologies using open source software (GDAL in R).
+
+## Why R?
+
+- Easy to learn
+    * Interpreted, dynamically typed programming language
+    * Test out your code in R's interpreter as you write your script (see [Rstudio](http://www.rstudio.com/) for a lovely IDE)
+- Very large community
+    * Innumerable examples on blogs, StackOverflow, Github, etc.
+        + See [R-bloggers](http://www.r-bloggers.com/)
+    * New scientific algorithms or techniques are often first available as an R package
+    * CRAN is huge
+- Free
+
+## Dependencies
+
+The following R libraries will be needed for this tutorial:
+
+  - raster
+  - rgdal
+  - sp
+  - randomForest
+  
+Install them as such:
+
+``` r
+install.packages(c('raster', 'rgdal', 'sp', 'randomForest'))
+```
+
+## Chapters
+
+1. [Exploring GIS packages in R](chapter_1_GDAL.html)
+2. [Your first remote sensing vegetation index](chapter_2_indices.html)
+3. [Plotting and visualizing your data](chapter_3_visualization.html)
+4. [Importing and using vector data](chapter_4_vector.html)
+5. [Classification of land cover](chapter_5_classificationm.html)
