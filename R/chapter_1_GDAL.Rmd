@@ -128,3 +128,33 @@ b <- brick(system.file("external/rlogo.grd", package="raster"))
 plotRGB(b)
 plotRGB(b, 3, 2, 1)
 ```
+
+### Example
+
+For a more interesting example, we'll download a subset of a Landsat 7 image from an area in Chiapas, Mexico from the tutorial Github repository.
+
+``` {r}
+download.file(url='https://raw.githubusercontent.com/ceholden/open-geo-tutorial/master/example/LE70220492002106EDC00_stack.gtif',
+              destfile='LE70220492002106EDC00_stack.gtif', method='curl')
+```
+
+Since this is a multispectral image, we'll use the `brick` function to load it:
+
+``` {r}
+le7 <- brick('LE70220492002106EDC00_stack.gtif')
+le7
+```
+
+Notice the attributes of the `RasterBrick` class, including the pixel dimensions of the image (nrow, ncol, nlayers), the spatial resolution, the geographic transform (extent), and the coordinate reference system (projection).
+
+We can refer to the bands within this `RasterBrick` either by the band index or by the layer names (when defined):
+
+``` {r}
+all.equal(le7[[3]], le7$band.3.reflectance)
+```
+
+Now, plot it in 5-4-3:
+
+``` {r}
+plotRGB(le7, r=5, g=4, b=3, stretch="lin")
+```
