@@ -5,6 +5,7 @@ date: "03/24/2015"
 output: html_document
 ---
 
+
 ### Introduction
 
 In this chapter we will classify the Landsat image we've been working with using a supervised classification approach which incorporates the training data we worked with in [chapter 4](chapter_4_vector.html). Specifically, we will be using the [RandomForest (Brieman 2001)](http://link.springer.com/article/10.1023/A:1010933404324) ensemble decision tree algorithm by [Leo Breiman and Adele Cutler](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm). The RandomForest algorithm has recently become extremely popular in the field of remote sensing, and is quite fast when compared to some other machine learning approaches (e.g., SVM can be quite computationally intensive). This isn't to say that it is the best per se; rather it is a great first step into the world of machine learning for classification and regression.
@@ -35,6 +36,106 @@ RandomForest is available in the `randomForest` package.
 library(randomForest)
 ```
 
+RandomForest can be used for regression, supervised classification, and unsupervised classification, or clustering. Since we already have categorical training data, we'll be doing supervised classification to predict land cover labels.
+
+### Data
+
+Just in case it's not in your workspace, let's download and load the data. In this final chapter we'll be using a cloud-free image also available on Github:
+
+``` {r}
+library(raster)
+library(rgdal)
+
+if (file.exists('training_data.shp') == F) {
+    download.file(url = 'https://raw.githubusercontent.com/ceholden/open-geo-tutorial/master/example/training_data.zip', 
+                  destfile = 'training_data.zip', method = 'curl')
+    unzip('training_data.zip')
+}
+training <- readOGR('training_data.shp', layer='training_data')
+
+if (file.exists('LE70220491999322EDC01_stack.gtif') == F) {
+    download.file(url='https://raw.githubusercontent.com/ceholden/open-geo-tutorial/master/example/LE70220491999322EDC01_stack.gtif',
+                  destfile='LE70220491999322EDC01_stack.gtif', method='curl')
+}
+le7 <- brick('LE70220491999322EDC01_stack.gtif')
+```
+
+With the data loaded, let's extract the reflectance data covering the training data labels.
+
+``` {r}
+roi_data <- extract(le7, training, df=TRUE)
+```
+
+Remember that this dataset may have clouds or cloud shadows. Let's mask them out:
+
+``` {r}
+roi_data[which(roi_data$Band.8 > 1)] <- NA
+```
+
+We'll also need to attach the labels to this `DataFrame`:
+
+``` {r}
+roi_data$lc <- as.factor(training$id[roi_data$ID])
+roi_data$desc <- as.factor(training$class[roi_data$ID])
+```
+
+### Train RandomForest
+
+Let's use the extracted training data to train the RandomForest algorithm:
+
+``` {r}
+# Set seed value for RNG for reproducibility
+set.seed(1234567890)
+
+colnames(roi_data)
+# Shorten column names
+colnames(roi_data) <- c('ID', 'b1', 'b2', 'b3', 'b4', 'b5', 'b7', 'b6', 'fmask', 'lc', 'desc')
+
+rf <- randomForest(lc ~ b1 + b2 + b3 + b4 + b5 + b7 + b6, data=roi_data, importance=TRUE)
+print(rf)
+```
+
+One of the useful metrics provided by RandomForest is the `importance` metric. This metric can be computed in two ways -- the mean decrease in accuracy as each variable is removed or the [Gini impurity](http://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity) metric. Either way it gives an idea of what features (Landsat bands) were important in assigning the classification labels.
+
+See `?importance` for more information:
+
+> Here are the definitions of the variable importance measures. The first measure is computed from permuting OOB data: For each tree, the prediction error on the out-of-bag portion of the data is recorded (error rate for classification, MSE for regression). Then the same is done after permuting each predictor variable. The difference between the two are then averaged over all trees, and normalized by the standard deviation of the differences. If the standard deviation of the differences is equal to 0 for a variable, the division is not done (but the average is almost always equal to 0 in that case).
+
+> The second measure is the total decrease in node impurities from splitting on the variable, averaged over all trees. For classification, the node impurity is measured by the Gini index. For regression, it is measured by residual sum of squares.
 
 
+``` {r}
+varImpPlot(rf)
+```
 
+Sticking with similarities for right now, we see that the thermal band (band 6) is not very useful for our classification. This should agree with our expectations because the brightness temperature does not vary greatly across the land covers we selected, although it can prove useful when comparing irregated agriculture against natural grasslands or urban heat island impacted development against more suburban development.
+
+I am more inclined to believe the importance as measured by the mean decrease in the Gini impurity metric because it ranks the two short-wave infrared (SWIR) bands more highly than the near-infrared (NIR) or the visible. Because it is impacted by leaf moisture, the SWIR bands greatly help the distinction between forests and grasslands. One thing to note is that because many of the bands are intrinsically or physically correlated with one another, our dataset is highly collinear. This multicollinearity means that a small subset of the bands provide truely unique information and our importance metric will be unstable depending on the random chance of one band being favored over another highly correlated band.
+
+### Classify
+
+We can proceed to classify the entire raster now that our algorithm is trained. To make sure our classifier knows what raster bands to choose from, we'll begin by renaming the layers within our Landsat 7 image.
+
+``` {r}
+le7_class <- le7
+names(le7_class) <- c('b1', 'b2', 'b3', 'b4', 'b5', 'b7', 'b6', 'fmask')
+
+# Predict!
+le7_pred <- predict(le7_class, model=rf, na.rm=T)
+```
+
+### Map
+
+Let's make a map!
+
+``` {r}
+# Create color map
+colors <- c(rgb(0, 150, 0, maxColorValue=255),  # Forest
+            rgb(0, 0, 255, maxColorValue=255),  # Water
+            rgb(0, 255, 0, maxColorValue=255),  # Herbaceous
+            rgb(160, 82, 45, maxColorValue=255),  # Barren
+            rgb(255, 0, 0, maxColorValue=255))  # Urban
+
+plotRGB(le7, r=5, g=4, b=3, stretch="lin")
+plot(le7_pred, col=colors)
+```

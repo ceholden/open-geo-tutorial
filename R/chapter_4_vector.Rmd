@@ -2,7 +2,7 @@
 title: 'Chapter 4: Vector Data'
 author: "Chris Holden"
 date: "03/24/2015"
-output: html_document
+output: pdf_document
 ---
 
 ### Introduction

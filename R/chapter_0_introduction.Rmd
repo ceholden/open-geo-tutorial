@@ -2,7 +2,7 @@
 title: "Introduction"
 author: "Chris Holden"
 date: "03/24/2015"
-output: html_document
+output: pdf_document
 ---
 
 Tutorial of basic remote sensing and GIS methodologies using open source software (GDAL in R).

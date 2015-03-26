@@ -2,7 +2,7 @@
 title: 'Chapter 2: Vegetation Indices'
 author: "Chris Holden"
 date: "03/24/2015"
-output: html_document
+output: pdf_document
 ---
 
 As seen in the previous lesson, the `Raster*` objects within the `raster` package support basic arithmetic. Now that we can read our data into the computer and we know how to do some math, let's calculate some vegetation indices.

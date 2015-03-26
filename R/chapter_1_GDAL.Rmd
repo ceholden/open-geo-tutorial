@@ -1,8 +1,8 @@
 ---
-title: "Chapter 1: GDAL"
+title: 'Chapter 1: GDAL'
 author: "Chris Holden"
 date: "03/24/2015"
-output: html_document
+output: pdf_document
 ---
 
 ## Geographic Data Abstraction Library

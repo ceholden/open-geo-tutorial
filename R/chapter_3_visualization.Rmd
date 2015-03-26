@@ -2,7 +2,7 @@
 title: 'Chapter 3: Visualization'
 author: "Chris Holden"
 date: "03/24/2015"
-output: html_document
+output: pdf_document
 ---
 
 R's default and `raster` plotting utilities make it very easy to explore your data. One of the earliest exploratory efforts in remote sensing using Landsat imagery was the development of the "Tasseled Cap" transformation by Kauth and Thomas. By applying data reduction technique (PCA, basically) for agricultural training sites they hand picked, Kauth and Thomas came up with a series of linear transformations that turn Landsat bands into physically meaningful indices. In more modern times, these "Tasseled Cap" transformations have been referred to as the "Brightness", "Greenness", and "Wetness" transforms for the physical meanings described.
