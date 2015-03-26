@@ -5,3 +5,119 @@ date: "03/24/2015"
 output: html_document
 ---
 
+### Introduction
+
+The **OGR** library is a companion library to **GDAL** that handles vector data capabilities, including information queryies, file conversions, rasterization of polygon features, polygonization of raster features, and much more. It handles popular formats including the *ESRI Shapefile*, *Keyhole Markup Language*, *PostGIS*, and *SpatiaLite*. For more information on how **OGR** came about and how it relates to **GDAL**, see here: <http://trac.osgeo.org/gdal/wiki/FAQGeneral#WhatisthisOGRstuff>.
+
+We will be using **OGR** without necessarily knowing it, but it will be driving our input and output for vector data.
+
+### Dataset
+
+I've digitized some polygons for our small subset study site that contain descriptions of the land cover within the polygon. These polygons will serve as training data for our future land cover classification.
+
+To get the data, let's download it from Github:
+
+``` {r}
+if (file.exists('training_data.shp') == F) {
+    download.file(url = 'https://raw.githubusercontent.com/ceholden/open-geo-tutorial/master/example/training_data.zip', 
+                  destfile = 'training_data.zip', method = 'curl')
+    unzip('training_data.zip')
+}
+```
+
+To read this dataset into memory, use the `readOGR` function from `rgdal`:
+
+``` {r}
+library(rgdal)
+
+training <- readOGR('training_data.shp', layer='training_data')
+summary(training)
+```
+
+As you can see, this `training_data.shp` file contains two fields: "id", and "class". The ID is just an integer factor variable for each class label. The unique class labels within this dataset are:
+
+``` {r}
+unique(training$class)
+```
+
+The dataset read in through `readOGR` is stored as a `SpatialPolygonsDataFrame` class. There are other similar classes for `SpatialPoints*`, `SpatialLines*`, and `SpatialGrid*`. All of these classes behave like normal `DataFrame` classes, but they contain additional information about geolocation and projection.
+
+### Reprojection
+
+A common tool needed for GIS work is reprojection which translates the coordinates of a dataset from one projection system to another. Let's check our dataset's projection:
+
+``` {r}
+proj4string(training)
+```
+
+The projection is WGS84 UTM 15N already, which matches our Landsat data. The projection information that was printed out is formatted as a [Proj4](http://en.wikipedia.org/wiki/PROJ.4) string, an extremely common and simple way of defining projections. To find out projection parameters, definitions, and to translate between any of the many ways of describing a projection, visit <http://spatialreference.org/>.
+
+If we wanted to reproject to latitude-longitude coordinates using WGS84, we could do so as such:
+
+``` {r}
+training_wgs84 <- spTransform(training, CRS("+proj=longlat +datum=WGS84"))
+proj4string(training_wgs84)
+```
+
+As you can see, the coordinates are now listed in latitude/longitude.
+
+### Plotting
+
+To visualize our training data, we can simply use the `plot` command:
+
+``` {r}
+plot(training)
+```
+
+This created a boring, hard to reference plot. We can enhance it by drawing it on top of our remote sensing image. First, make sure we have it loaded in our workspace:
+
+``` {r}
+library(raster)
+
+if (file.exists('LE70220492002106EDC00_stack.gtif') == F) {
+    download.file(url='https://raw.githubusercontent.com/ceholden/open-geo-tutorial/master/example/LE70220492002106EDC00_stack.gtif',
+                  destfile='LE70220492002106EDC00_stack.gtif', method='curl')
+}
+
+le7 <- brick('LE70220492002106EDC00_stack.gtif')
+proj4string(le7)
+```
+
+Remember that these two datasets are in the same projection already. GIS softwares like QGIS will perform "On the Fly Reprojection", but R will not do this.
+
+``` {r}
+plotRGB(le7, r=5, g=4, b=3, stretch="lin")
+plot(training, lwd=3, add=T)
+```
+
+We can add colors based on the class labels:
+
+``` {r}
+plotRGB(le7, r=5, g=4, b=3, stretch="lin")
+
+classes <- unique(training$class)
+cols <- rainbow(length(classes))
+line_cols <- rep(cols[0], length(training))
+for (i in 1:length(cols)) {
+    line_cols[which(training$class == classes[i])] <- cols[i]
+}
+
+plot(training, lwd=3, col=line_cols, add=T)
+```
+
+Wow!
+
+### Vector and Raster
+
+If we wanted to extract values from our Landsat 7 image within each of our training data polygons, we could use the aptly named `extract` function:
+
+``` {r}
+
+# Extract the region of interest (roi) data
+roi_data <- extract(le7, training, df=TRUE)
+names(roi_data)
+dim(roi_data)
+head(roi_data)
+```
+
+We now have all of the information we need to facilitate comparison between our two datasets nicely contained within an easy to use, familiar R `DataFrame`.

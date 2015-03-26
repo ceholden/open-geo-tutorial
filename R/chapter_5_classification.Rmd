@@ -4,3 +4,37 @@ author: "Chris Holden"
 date: "03/24/2015"
 output: html_document
 ---
+
+### Introduction
+
+In this chapter we will classify the Landsat image we've been working with using a supervised classification approach which incorporates the training data we worked with in [chapter 4](chapter_4_vector.html). Specifically, we will be using the [RandomForest (Brieman 2001)](http://link.springer.com/article/10.1023/A:1010933404324) ensemble decision tree algorithm by [Leo Breiman and Adele Cutler](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm). The RandomForest algorithm has recently become extremely popular in the field of remote sensing, and is quite fast when compared to some other machine learning approaches (e.g., SVM can be quite computationally intensive). This isn't to say that it is the best per se; rather it is a great first step into the world of machine learning for classification and regression.
+
+A few good resources for understanding RandomForest can be found:
+
++ [Breiman, Leo. 2001. Random Forests. Machine Learning 45-1: 5-32.](http://link.springer.com/article/10.1023/A:1010933404324)
++ [Wikipedia - Random Forest](http://en.wikipedia.org/wiki/Random_forest)
++ [Breiman and Cutler's website](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#workings)
++ [Blog entry from ŷhat](http://blog.yhathq.com/posts/random-forests-in-python.html)
+
+A brief explanation of the RandomForest algorithm comes from the name. Rather than utilize the predictions of a single decision tree, the algorithm will take the ensemble result of a large number of decision trees (a forest of them). The "Random" part of the name comes from the term "bootstrap aggregating", or "bagging". What this means is that each tree within the forest only gets to train on some subset of the full training dataset (the subset is determined by sampling with replacement). The elements of the training data for each tree that are left unseen are held "out-of-bag" for estimation of accuracy. Randomness also helps decide which feature input variables are seen at each node in each decision tree. Once all individual trees are fit to the random subset of the training data, using a random set of feature variable at each node, the ensemble of them all is used to give the final prediction. 
+
+In the classification mode, this means that if you were to have 5 classes being predicted using 500 trees, the output prediction would be the class that has the most number of the 500 trees predicting it. The proportion of the number of trees that voted for the winning class can be a diagnostic of the representativeness of your training data relative to the rest of the image. Taking the 500 trees example, if you have pixels which are voted to be in the "Forest" land cover class by 475 of 500 trees, you could say that this was a relatively certain prediction. On the other hand, if you have a pixel which gets 250 votes for "Forest" and 225 votes for "Shrub", you could interpret this as either an innately confusing pixel (maybe it is a mixed pixel, or it is a small statured forest) or as an indicator that you need more training data samples in these types of pixels.
+
+Finally, Random Forest has some other benefits:
++ It gives you a measure of "variable important" which relates how useful your input features (e.g. spectral bands) were in the classification
++ The "out-of-bag" samples in each tree can be used to validate each tree. Grouping these predicted accuracies across all trees can [sometimes give you an unbiased estimate of the error rate](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#ooberr) similar to doing cross-validation.
++ Can be used for regressions, unsupervised clustering, or supervised classification
++ Available in many popular languages, including Python, R, and MATLAB
++ Free and open source, and fast
+
+### RandomForest in R
+
+RandomForest is available in the `randomForest` package.
+
+``` {r}
+library(randomForest)
+```
+
+
+
+
