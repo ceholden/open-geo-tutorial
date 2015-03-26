@@ -3,12 +3,12 @@ Open Source Geoprocessing Tutorial
 
 Tutorial of basic remote sensing and GIS methodologies using open source software (GDAL in Python). Tutorial covers workflow to perform image classification using machine learning classifiers:
 
-0. Introduction [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_0_introduction.ipynb)] [[R](http://rpubs.com/ceholden/open-geo-tutorial_chp0)]
-1. The GDAL datatypes and objects [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_1_GDALDataset.ipynb)] [[R](http://rpubs.com/ceholden/open-geo-tutorial_chp1)]
-2. Your first vegetation index [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_2_indices.ipynb)] [[R](http://rpubs.com/ceholden/open-geo-tutorial_chp2)]
-3. Visualizing data [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_3_visualization.ipynb)] [[R](http://rpubs.com/ceholden/open-geo-tutorial_chp3)]
-4. Vector data - the OGR library [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_4_vector.ipynb)] [[R](http://rpubs.com/ceholden/open-geo-tutorial_chp4)]
-5. Land cover classification [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_5_classification.ipynb)] [[R](http://rpubs.com/ceholden/open-geo-tutorial_chp5)]
+0. Introduction [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_0_introduction.ipynb)] [[R](http://ceholden.github.io/tutorials/open-geo-tutorial/R/chapter_0_introduction.html)]
+1. The GDAL datatypes and objects [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_1_GDALDataset.ipynb)] [[R](http://ceholden.github.io/tutorials/open-geo-tutorial/R/chapter_1_GDAL.html)]
+2. Your first vegetation index [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_2_indices.ipynb)] [[R](http://ceholden.github.io/tutorials/open-geo-tutorial/R/chapter_2_indices.html)]
+3. Visualizing data [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_3_visualization.ipynb)] [[R](http://ceholden.github.io/tutorials/open-geo-tutorial/R/chapter_3_visualization.html)]
+4. Vector data - the OGR library [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_4_vector.ipynb)] [[R](http://ceholden.github.io/tutorials/open-geo-tutorial/R/chapter_4_vector.html)]
+5. Land cover classification [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_5_classification.ipynb)] [[R](http://ceholden.github.io/tutorials/open-geo-tutorial/R/chapter_5_classification.html)]
 6. The spatial dimension - filters and segmentation [[Python](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_6_spatial.ipynb)]
 
 
