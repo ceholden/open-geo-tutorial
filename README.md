@@ -3,18 +3,18 @@ Open Source Geoprocessing Tutorial
 
 Tutorial of basic remote sensing and GIS methodologies using open source software (GDAL in Python). Tutorial covers workflow to perform image classification using machine learning classifiers:
 
-0. [Introduction](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/chapters/chapter_0_introduction.ipynb)
-1. [The GDAL datatypes and objects](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/chapters/chapter_1_GDALDataset.ipynb)
-2. [Your first vegetation index](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/chapters/chapter_2_indices.ipynb)
-3. [Visualizing data with `matplotlib`](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/chapters/chapter_3_visualization.ipynb)
-4. [Vector data - the OGR library](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/chapters/chapter_4_vector.ipynb)
-5. [Land cover classification](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/chapters/chapter_5_classification.ipynb)
-6. [The spatial dimension - filters and segmentation](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/chapters/chapter_6_spatial.ipynb)
+0. [Introduction](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapterschapter_0_introduction.ipynb)
+1. [The GDAL datatypes and objects](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapterschapter_1_GDALDataset.ipynb)
+2. [Your first vegetation index](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapterschapter_2_indices.ipynb)
+3. [Visualizing data with `matplotlib`](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapterschapter_3_visualization.ipynb)
+4. [Vector data - the OGR library](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapters/chapter_4_vector.ipynb)
+5. [Land cover classification](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapterschapter_5_classification.ipynb)
+6. [The spatial dimension - filters and segmentation](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/blob/master/Python/chapterschapter_6_spatial.ipynb)
 
 
 ## Access
 #### Viewing IPython Notebook chapters
-You can view these IPython notebooks as HTML pages by viewing them locally by opening the outputs in the `build` folder, or by accessing the IPython notebooks via a web viewer at [here](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/tree/master/chapters/), or the chapter links shown above.
+You can view these IPython notebooks as HTML pages by viewing them locally by opening the outputs in the `build` folder, or by accessing the IPython notebooks via a web viewer at [here](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/tree/master/Python/chapters), or the chapter links shown above.
 
 
 #### Running IPython Notebook chapters
