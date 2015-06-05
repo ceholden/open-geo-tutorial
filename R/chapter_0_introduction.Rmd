@@ -2,7 +2,7 @@
 title: "Introduction"
 author: "Chris Holden"
 date: "03/24/2015"
-output: html_document
+output: pdf_document
 ---
 
 Tutorial of basic remote sensing and GIS methodologies using open source software (GDAL in R).
@@ -42,7 +42,7 @@ install.packages(c('raster', 'rgdal', 'sp', 'randomForest'))
 2. [Your first remote sensing vegetation index](chapter_2_indices.html)
 3. [Plotting and visualizing your data](chapter_3_visualization.html)
 4. [Importing and using vector data](chapter_4_vector.html)
-5. [Classification of land cover](chapter_5_classificationm.html)
+5. [Classification of land cover](chapter_5_classification.html)
 
 ## GDAL on OSX {#GDAL_on_OSX}
 
