@@ -29,7 +29,11 @@ install.packages(c('raster', 'rgdal', 'sp', 'randomForest'))
 
 # Python Installation
 
-To run the Jupyter Notebooks (formerly known as IPython Notebooks) and complete the tutorial, you will need to install Python and the libraries used in the tutorials. This installation can be accomplished in many ways, but I will list the two most common approaches:
+Thanks to the lovely people at [binder], you can try running the lessons on their servers via magic:
+
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/ceholden/open-geo-tutorial)
+
+To run the Jupyter Notebooks (formerly known as IPython Notebooks) and follow the tutorial locally, you will need to install Python and the libraries used in the tutorials. This installation can be accomplished in many ways, but I will list the two most common approaches:
 
 ### conda
 
