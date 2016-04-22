@@ -36,7 +36,7 @@ To run the Jupyter Notebooks (formerly known as IPython Notebooks) and complete 
 I recommend using the [Anaconda](http://conda.pydata.org/docs/) Python distribution to make installation of the tutorial dependencies less complicated. After [installing Anaconda or "miniconda" by following their instructions](http://conda.pydata.org/docs/install/quick.html), you can install the dependencies as follows:
 
 ``` bash
-conda env create -f environment.yaml
+conda env create -f environment.yml
 source activate open-geo-tutorial
 ```
 
