@@ -11,31 +11,48 @@ Tutorial of basic remote sensing and GIS methodologies using open source softwar
 3. Visualizing data [[Python](http://ceholden.github.io/open-geo-tutorial/python/chapter_3_visualization.html)] [[R](http://ceholden.github.io/open-geo-tutorial/R/chapter_3_visualization.html)]
 4. Vector data - the OGR library [[Python](http://ceholden.github.io/open-geo-tutorial/python/chapter_4_vector.html)] [[R](http://ceholden.github.io/open-geo-tutorial/R/chapter_4_vector.html)]
 5. Land cover classification [[Python](http://ceholden.github.io/open-geo-tutorial/python/chapter_5_classification.html)] [[R](http://ceholden.github.io/open-geo-tutorial/R/chapter_5_classification.html)]
-6. The spatial dimension - filters and segmentation [[Python](http://ceholden.github.io/open-geo-tutorial/python/chapter_6_spatial.html)]
 
+# R Installation
 
-## Access
-#### Viewing IPython Notebook chapters
-You can view these IPython notebooks as HTML pages by viewing them locally by opening the outputs in the `build` folder, or by accessing the IPython notebooks via a web viewer at [here](http://nbviewer.ipython.org/github/ceholden/open-geo-tutorial/tree/master/Python/chapters), or the chapter links shown above.
+The following R libraries will be needed for this tutorial:
 
+- `raster`
+- `rgdal`
+- `sp`
+- `randomForest`
 
-#### Running IPython Notebook chapters
-You can, of course, download this repository and run the IPython notebooks yourself. The added benefit to this is that you can interact with them.
+Install them from within R as follows:
 
-For users who don't have the software environment required, the people behind the [Wakari](www.wakari.io) serivce - [Continuum Analytics](http://continuum.io/) - have a [free tier (limited CPU and space compared to paid plans)](https://wakari.io/plans) which will host IPython Notebooks over the web on their servers. These IPython Notebook environments contain all the third party libraries we will use, including GDAL, NumPy, and scikit-learn.
+``` r
+install.packages(c('raster', 'rgdal', 'sp', 'randomForest'))
+```
 
-I've included a few special instructions for Wakari users (see Chapter 5), but the workflow for running the notebooks on Wakari is as follows:
+# Python Installation
 
-+ Sign up for an account
-+ Log in to your new account
-+ Open up a Shell terminal session
-+ Clone this repository using `git clone https://github.com/ceholden/open-geo-tutorial.git`
-+ Open up your IPython Notebook window and navigate to the "open-geo-tutorial/chapters" folder
-+ Click on any notebook to run the chapter
-+ Pay attention to sections which mention Wakari -- especially Chapter 5 for the PATH changes
+To run the Jupyter Notebooks (formerly known as IPython Notebooks) and complete the tutorial, you will need to install Python and the libraries used in the tutorials. This installation can be accomplished in many ways, but I will list the two most common approaches:
 
-## Requirements
+### conda
 
-Python package requirements are listed in `requirements.txt`.
+I recommend using the [Anaconda](http://conda.pydata.org/docs/) Python distribution to make installation of the tutorial dependencies less complicated. After [installing Anaconda or "miniconda" by following their instructions](http://conda.pydata.org/docs/install/quick.html), you can install the dependencies as follows:
+
+``` bash
+conda env create -f environment.yaml
+source activate open-geo-tutorial
+```
+
+### pip
+
+Assuming you already have Python installed, you could use the the Python package manager, [pip](https://en.wikipedia.org/wiki/Pip_(package_manager)), to install the dependencies.
+
+Following "pip" convention, you can find all package requirements in the `requirements.txt` file. I would also recommend installing these packages into a virtual environment to avoid conflicts with existing versions of the required Python packages. To isolate these dependencies from the rest of your system, use [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html):
+
+``` bash
+# Create virtual environment to isolate dependencies
+virtualenv venv
+# Activate virtual environment
+source venv/bin/activate
+# Install dependencies
+pip install -r requirements.txt
+```
 
 You will need to have GDAL installed for Python to build the drivers against. You may have the Python bindings already built as part of GDAL's installation process.
