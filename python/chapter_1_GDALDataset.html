@@ -11803,7 +11803,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import the Python 3 print function</span>
@@ -11828,7 +11828,7 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>GDAL&#39;s version is: 2.0.0
-&lt;module &#39;osgeo.gdal&#39; from &#39;/home/ceholden/conda/envs/open-geo-tutorial/lib/python3.5/site-packages/osgeo/gdal.py&#39;&gt;
+&lt;module &#39;osgeo.gdal&#39; from &#39;/home/ceholden/conda/envs/open-geo-tutorial/lib/python3.4/site-packages/osgeo/gdal.py&#39;&gt;
 </pre>
 </div>
 </div>
@@ -11849,7 +11849,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let&#39;s print out the value of the GDAL Byte data type (GDT_Byte)</span>
@@ -11882,7 +11882,7 @@ div#notebook {
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
 <span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-2-cb75e61c602f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-cb75e61c602f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
 <span class="ansi-green-fg">      6</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>gdal<span class="ansi-yellow-intense-fg ansi-bold">.</span>GDT_Byte<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 <span class="ansi-green-fg">      7</span> <span class="ansi-red-intense-fg ansi-bold"># Doesn&#39;t work</span>
 <span class="ansi-green-intense-fg ansi-bold">----&gt; 8</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span>GDT_Byte<span class="ansi-yellow-intense-fg ansi-bold">)</span>
@@ -11910,7 +11910,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open a GDAL dataset</span>
@@ -11920,20 +11920,6 @@ div#notebook {
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;osgeo.gdal.Dataset; proxy of &lt;Swig Object of type &#39;GDALDatasetShadow *&#39; at 0x7f1054eb0c30&gt; &gt;
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -11950,7 +11936,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How many bands does this image have?</span>
@@ -11989,35 +11975,6 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of bands in image: 8
-
-Image size is: 250 rows x 250 columns
-
-Raster description: ../../example/LE70220491999322EDC01_stack.gtif
-Raster metadata:
-{&#39;Band_2&#39;: &#39;band 2 reflectance&#39;, &#39;Band_4&#39;: &#39;band 4 reflectance&#39;, &#39;Band_7&#39;: &#39;band 6 temperature&#39;, &#39;Band_3&#39;: &#39;band 3 reflectance&#39;, &#39;AREA_OR_POINT&#39;: &#39;Area&#39;, &#39;Band_1&#39;: &#39;band 1 reflectance&#39;, &#39;Band_8&#39;: &#39;Band 8&#39;, &#39;Band_5&#39;: &#39;band 5 reflectance&#39;, &#39;Band_6&#39;: &#39;band 7 reflectance&#39;}
-
-
-Raster driver: GTiff
-
-Image projection:
-PROJCS[&#34;unnamed&#34;,PROJECTION[&#34;Transverse_Mercator&#34;],PARAMETER[&#34;latitude_of_origin&#34;,0],PARAMETER[&#34;central_meridian&#34;,-93],PARAMETER[&#34;scale_factor&#34;,0.9996],PARAMETER[&#34;false_easting&#34;,500000],PARAMETER[&#34;false_northing&#34;,0],UNIT[&#34;metre&#34;,1,AUTHORITY[&#34;EPSG&#34;,&#34;9001&#34;]]]
-
-Image geo-transform: (462405.0, 30.0, 0.0, 1741815.0, 0.0, -30.0)
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12043,7 +12000,7 @@ Image geo-transform: (462405.0, 30.0, 0.0, 1741815.0, 0.0, -30.0)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open the blue band in our image</span>
@@ -12053,20 +12010,6 @@ Image geo-transform: (462405.0, 30.0, 0.0, 1741815.0, 0.0, -30.0)
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;osgeo.gdal.Band; proxy of &lt;Swig Object of type &#39;GDALRasterBandShadow *&#39; at 0x7f1054eb0b70&gt; &gt;
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -12083,7 +12026,7 @@ Image geo-transform: (462405.0, 30.0, 0.0, 1741815.0, 0.0, -30.0)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What is the band&#39;s datatype?</span>
@@ -12109,26 +12052,6 @@ Image geo-transform: (462405.0, 30.0, 0.0, 1741815.0, 0.0, -30.0)
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Band datatype: 3
-Band datatype: Int16
-Band datatype size: 16 bytes
-
-Band range: 1810.0 - 198.0
-Band mean, stddev: 439.015984, 139.7168287663
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12150,7 +12073,7 @@ Band mean, stddev: 439.015984, 139.7168287663
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># No alias</span>
@@ -12163,21 +12086,6 @@ Band mean, stddev: 439.015984, 139.7168287663
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.11.0
-1.11.0
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -12194,32 +12102,13 @@ Band mean, stddev: 439.015984, 139.7168287663
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">blue</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Help on method ReadAsArray in module osgeo.gdal:
-
-ReadAsArray(xoff=0, yoff=0, win_xsize=None, win_ysize=None, buf_xsize=None, buf_ysize=None, buf_type=None, buf_obj=None, resample_alg=0, callback=None, callback_data=None) method of osgeo.gdal.Band instance
-    Reading a chunk of a GDAL band into a numpy array. The optional (buf_xsize,buf_ysize,buf_type)
-    parameters should generally not be specified if buf_obj is specified. The array is returned
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -12237,7 +12126,7 @@ ReadAsArray(xoff=0, yoff=0, win_xsize=None, win_ysize=None, buf_xsize=None, buf_
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">blue_data</span> <span class="o">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">()</span>
@@ -12249,29 +12138,6 @@ ReadAsArray(xoff=0, yoff=0, win_xsize=None, win_ysize=None, buf_xsize=None, buf_
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[569 526 569 ..., 311 289 311]
- [568 589 568 ..., 267 332 332]
- [546 525 589 ..., 311 311 311]
- ..., 
- [499 543 478 ..., 306 349 372]
- [520 520 543 ..., 328 372 393]
- [543 564 543 ..., 393 414 436]]
-
-Blue band mean is: 439.015984
-Size is: (250, 250)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -12289,7 +12155,7 @@ Size is: (250, 250)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize a 3d array -- use the size properties of our image for portability!</span>
@@ -12311,68 +12177,6 @@ Size is: (250, 250)
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[[  569.   886.   758. ...,   988.  2686.     0.]
-  [  526.   886.   758. ...,   988.  2686.     0.]
-  [  569.   798.   776. ...,   961.  2686.     0.]
-  ..., 
-  [  311.   452.   356. ...,   780.  2487.     0.]
-  [  289.   452.   297. ...,   647.  2487.     0.]
-  [  311.   430.   337. ...,   674.  2436.     0.]]
-
- [[  568.   886.   815. ...,  1014.  2686.     0.]
-  [  589.   929.   853. ...,  1014.  2686.     0.]
-  [  568.   907.   910. ...,  1014.  2686.     0.]
-  ..., 
-  [  267.   430.   318. ...,   674.  2487.     0.]
-  [  332.   452.   337. ...,   594.  2487.     0.]
-  [  332.   452.   395. ...,   727.  2487.     0.]]
-
- [[  546.   864.   834. ...,   988.  2637.     0.]
-  [  525.   886.   834. ...,   988.  2637.     0.]
-  [  589.   928.   891. ...,   988.  2637.     0.]
-  ..., 
-  [  311.   452.   356. ...,   727.  2487.     0.]
-  [  311.   475.   395. ...,   727.  2487.     0.]
-  [  311.   475.   356. ...,   753.  2487.     0.]]
-
- ..., 
- [[  499.   851.   766. ...,  1124.  2785.     0.]
-  [  543.   829.   747. ...,  1387.  2735.     0.]
-  [  478.   829.   766. ...,  1414.  2735.     0.]
-  ..., 
-  [  306.   473.   336. ...,   753.  2537.     0.]
-  [  349.   494.   375. ...,   753.  2537.     0.]
-  [  372.   584.   454. ...,   780.  2587.     0.]]
-
- [[  520.   829.   766. ...,  1283.  2785.     0.]
-  [  520.   829.   786. ...,  1387.  2785.     0.]
-  [  543.   829.   805. ...,  1361.  2785.     0.]
-  ..., 
-  [  328.   473.   336. ...,   568.  2587.     0.]
-  [  372.   628.   433. ...,  1045.  2587.     0.]
-  [  393.   628.   512. ...,  1018.  2587.     0.]]
-
- [[  543.   829.   825. ...,  1440.  2785.     0.]
-  [  564.   851.   863. ...,  1467.  2785.     0.]
-  [  543.   829.   766. ...,  1387.  2785.     0.]
-  ..., 
-  [  393.   607.   551. ...,  1230.  2686.     0.]
-  [  414.   673.   572. ...,  1440.  2686.     0.]
-  [  436.   628.   493. ...,  1045.  2637.     0.]]]
-float64
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12386,7 +12190,7 @@ float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">GetRasterBand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">DataType</span>
@@ -12396,26 +12200,10 @@ float64
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">osgeo</span> <span class="k">import</span> <span class="n">gdal_array</span>
@@ -12444,22 +12232,6 @@ float64
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Compare datatypes: 
-    when unspecified: float64
-    when specified: int16
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12475,7 +12247,7 @@ float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="kc">None</span>
@@ -12488,6 +12260,16 @@ float64
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <a href="chapter_2_indices.ipynb">next chapter</a> puts these lessons to use in order to calculate the Normalized Difference Vegetation Index (NDVI).</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
