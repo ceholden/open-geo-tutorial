@@ -29,7 +29,7 @@ install.packages(c('raster', 'rgdal', 'sp', 'randomForest'))
 
 # Python Installation
 
-Thanks to the lovely people at [binder], you can try running the lessons on their servers via magic:
+Thanks to the lovely people at [binder](http://mybinder.org/), you can try running the lessons on their servers via magic:
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/ceholden/open-geo-tutorial)
 
