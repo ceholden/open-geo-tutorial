@@ -4,5 +4,4 @@ numpy>=1.8.1
 pandas>=0.14.1
 scipy>=0.14.0
 scikit-learn>=0.15.0
-jupyter>=4.0
 notebook>=4.0
