@@ -32,6 +32,31 @@ classification using machine learning classifiers:
    [[Python](http://ceholden.github.io/open-geo-tutorial/python/chapter_5_classification.html)]
 [[R](http://ceholden.github.io/open-geo-tutorial/R/chapter_5_classification.html)]
 
+
+# Download
+
+Materials and data for these lessons are included inside this repository under
+the `example` folder. I would recommend downloading all of the lesson material
+at once, instead of downloading individual files.
+
+Two ways to download the entire repository include:
+
+* Use `git` to `clone` the repository (recommended)
+    * [Instructions](https://help.github.com/articles/cloning-a-repository/)
+* Downloading and extracting a ZIP file of the 'master' branch
+    * [Download link](https://github.com/ceholden/open-geo-tutorial/archive/master.zip)
+
+A caution:
+
+> Be careful trying to "right-click" and save files from repositories on
+> Github, because this will save a HTML file linking to the file instead of
+> the file itself. This has been a common source of confusion among people,
+> especially if they are new to Github. It is possible to download individual
+> files from a Github repository website, and can be done by clicking on a
+> file listed on the repository site, and then clicking the "Download" button
+> at the top right of the next web page (also next to the "History" button).
+
+
 # R Installation
 
 The following R libraries will be needed for this tutorial:
