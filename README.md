@@ -90,7 +90,9 @@ After [installing Anaconda or "miniconda" by following their
 instructions](http://conda.pydata.org/docs/install/quick.html), you can install
 the dependencies as follows:
 
-``` bash conda env create -f environment.yml source activate open-geo-tutorial
+``` bash
+conda env create -f environment.yml
+source activate open-geo-tutorial
 ```
 
 ### pip
@@ -105,9 +107,14 @@ virtual environment to avoid conflicts with existing versions of the required
 Python packages. To isolate these dependencies from the rest of your system, use
 [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html):
 
-``` bash # Create virtual environment to isolate dependencies virtualenv venv #
-Activate virtual environment source venv/bin/activate # Install dependencies pip
-install -r requirements.txt ```
+``` bash
+# Create virtual environment to isolate dependencies
+virtualenv venv
+# Activate virtual environment
+source venv/bin/activate
+# Install dependencies pip
+install -r requirements.txt
+```
 
 You will need to have GDAL installed for Python to build the drivers against.
 You may have the Python bindings already built as part of GDAL's installation
