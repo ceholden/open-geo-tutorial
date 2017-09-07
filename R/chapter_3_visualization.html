@@ -91,13 +91,13 @@ le7</code></pre>
 <div id="coefficients" class="section level3">
 <h3>Coefficients</h3>
 <p>The coefficients required to transform Landsat surface reflectance data into these “Tasseled Cap” indices are given by Crist (1985) and Huang <em>et al</em> (2002):</p>
-<pre class="r"><code>refB = c(0.2043, 0.4158, 0.5524, 0.5741, 0.3124, 0.2330) # for Landsat 4/5
+<pre class="r"><code>refB = c(0.2043, 0.4158, 0.5524, 0.5741, 0.3124, 0.2303) # for Landsat 4/5
 refB = c(0.3561, 0.3972, 0.3904, 0.6966, 0.2286, 0.1596) # for Landsat 7
 
-refG = c(-0.1603, -0.2189, -0.4934, 0.7940, -0.0002, -0.1446) # for Landsat 4/5
+refG = c(-0.1603, -0.2819, -0.4934, 0.7940, -0.0002, -0.1446) # for Landsat 4/5
 refG = c(-0.3344, -0.3544, -0.4556, 0.6966, -0.0242,-0.2630) # for Landsat 7
 
-refW = c(0.0315, 0.2021, 0.3102, 0.1954, -0.6806, -0.6109) # for Landsat 4/5
+refW = c(0.0315, 0.2021, 0.3102, 0.1594, -0.6806, -0.6109) # for Landsat 4/5
 refW = c(0.2626, 0.2141, 0.0926, 0.0656, -0.7629, -0.5388) # for Landsat 7</code></pre>
 <p>We will ignore the last two bands in this Landsat dataset. The second to last band is the thermal band which measures brightness temperature. The last band is ignored because it is a mask band that separates clear observations of land and water from clouds, cloud shadows, and snow.</p>
 <pre class="r"><code>le7_data &lt;- stack(le7, layers=names(le7)[seq(1, 6)])</code></pre>
