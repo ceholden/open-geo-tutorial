@@ -11687,6 +11687,10 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
+<style type="text/css">
+    .container { width:100% !important; }
+
+    </style>
 
 
 <style type="text/css">
@@ -21719,7 +21723,7 @@ AAAAOSKkBwAAAAAAAIAcEdIDAAAAAAAAQI78f+DlyRj80/uyAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-dataset">Preparing the dataset<a class="anchor-link" href="#Preparing-the-dataset">&#182;</a></h2><h4 id="Opening-the-images">Opening the images<a class="anchor-link" href="#Opening-the-images">&#182;</a></h4><p>Our first step is to recall our previous chapter's lessons by reading in the example image and the ROI image we created in <a href="chapter_5_vector.ipynb">chapter 5</a>:</p>
+<h2 id="Preparing-the-dataset">Preparing the dataset<a class="anchor-link" href="#Preparing-the-dataset">&#182;</a></h2><h4 id="Opening-the-images">Opening the images<a class="anchor-link" href="#Opening-the-images">&#182;</a></h4><p>Our first step is to recall our previous chapter's lessons by reading in the example image and the ROI image we created in Chapter 4 (link to <a href="chapter_4_vector.html">website</a> or <a href="chapter_4_vector.ipynb">Notebook</a>):</p>
 
 </div>
 </div>
@@ -22894,7 +22898,7 @@ All      583  24  223  173  97  1100
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take our full image, ignore the Fmask band, and reshape into long array for classification</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take our full image, ignore the Fmask band, and reshape into long 2d array (nrow * ncol, nband) for classification</span>
 <span class="n">new_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">img_as_array</span> <span class="o">=</span> <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">new_shape</span><span class="p">)</span>
