@@ -76,8 +76,8 @@ I highly recommend trying out [Docker](https://docs.docker.com/get-started/) if 
 
 `docker build -t condageo .` 
 
-which will create an OS image called 'condageo' and then to create the container run: 
+which will create an OS image called 'condageo' and then to create the container run this from the top of the git repo: 
 
-`docker run --name geo -p 8888:8888 -v "$PWD/Python/chapters:/opt/notebooks" -it condageo` 
+`docker run --name geo -p 8888:8888 -v "$PWD:/opt/notebooks" -it condageo` 
 
-which will start a container called 'geo' based on the 'condageo' image, then it will mount the /chapters directory from the git repo to the container's /opt/notebooks directory, and then give you the bash command line.
+which will start a container called 'geo' based on the 'condageo' image, then it will mount the repo directory to the container's /opt/notebooks directory where you can go access this repo's jupyter notebooks.
