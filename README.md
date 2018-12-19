@@ -72,4 +72,12 @@ source activate open-geo-tutorial
 
 ### docker
 
-I highly recommend trying out [Docker](https://docs.docker.com/get-started/) if you're not familiar with it. There is a bit of a startup time just for getting up to speed but it is the way to go for reproducible work. Docker provides operating-system-level virtualization, also known as "containerization" and thus you can be sure that your setup precisely replicates the one used here and will easily work. Once you've downloaded Docker you can simply run: `docker build -t condageo .` to create an image called 'condageo' and then running `docker run --name geo -p 8888:8888 -v "$PWD/Python/chapters:/opt/notebooks" -it condageo` will start a container called 'geo' based on the 'condageo' image, then it will mount the /chapters directory from the git repo to the container's /opt/notebooks directory, and then give you the bash command line.
+I highly recommend trying out [Docker](https://docs.docker.com/get-started/) if you're not familiar with it. There is a bit of a startup time just for getting up to speed but it is the way to go for reproducible work. Docker provides operating-system-level virtualization, also known as "containerization" and thus you can be sure that your setup precisely replicates the one used here and will easily work. Once you've downloaded Docker you can simply run: 
+
+`docker build -t condageo .` 
+
+which will create an OS image called 'condageo' and then to create the container run: 
+
+`docker run --name geo -p 8888:8888 -v "$PWD/Python/chapters:/opt/notebooks" -it condageo` 
+
+which will start a container called 'geo' based on the 'condageo' image, then it will mount the /chapters directory from the git repo to the container's /opt/notebooks directory, and then give you the bash command line.
