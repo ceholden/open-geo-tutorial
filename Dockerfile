@@ -33,4 +33,4 @@ CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/opt/notebooks", "--
 # jupyter notebook --allow-root --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser
 
 # docker built -t geo .
-# docker create -v /Users/clifgray/Documents/Code/:/opt/notebooks -it -p 8888:8888 --name geodock geo
+# docker create -v /Users/clifgray/Documents/Code/:/opt/notebooks -it -p 8888:8888 --name geocont geoimg
