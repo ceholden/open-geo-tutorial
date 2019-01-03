@@ -11785,14 +11785,42 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2><ul>
-<li><p>Easy to learn</p>
+<h2 id="Chapters">Chapters<a class="anchor-link" href="#Chapters">&#182;</a></h2><ol>
+<li><a href="chapter_1_rasterio.ipynb">Exploring the rasterio package for image analysis</a></li>
+<li><a href="chapter_2_indices.ipynb">Your first remote sensing vegetation index</a></li>
+<li><a href="chapter_3_visualization.ipynb">Plotting and visualizing your data with <code>matplotlib</code></a></li>
+<li><a href="chapter_4_vector.ipynb">Importing and using vector data</a></li>
+<li><a href="chapter_5_classification.ipynb">Classification of land cover</a></li>
+<li><a href="chapter_6_spatial.ipynb">The spatial dimension - filters and segmentation</a></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-Modern-Geospatial-Workflow-in-Python">A Modern Geospatial Workflow in Python<a class="anchor-link" href="#A-Modern-Geospatial-Workflow-in-Python">&#182;</a></h2><p>What kind of python libraries make up a modern geospatial workflow? This is just a sample of what we consider to be the basic building blocks and what will be covered here:</p>
 <ul>
-<li>Python is an interpreted, dynamically typed language with little boilerplate code required to begin doing useful things</li>
-<li>Test out your code in Python's interpreter (read-evaluate-print loop) before you put your code into a script</li>
-<li>Very readible and closer to human syntax than C/Java/R/MATLAB</li>
+<li><code>shapely</code> for geometric analysis</li>
+<li><code>fiona</code> for reading in vector formats</li>
+<li><code>rasterio</code> for reading in and working with raster formats</li>
+<li><code>GeoPandas</code> to extend <code>pandas</code> to work with geo formats</li>
+<li><code>numpy</code> and the python scientific computing stack for efficient computation</li>
+<li><code>matplotlib</code> for general plotting and visualization</li>
+<li><code>folium</code> for advanced and interactive plotting</li>
+<li><code>scikit-learn</code> for machine learning based data exploration, classification, and regression</li>
 </ul>
-</li>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2><ul>
 <li><p>Python is an actual programming language with a large standard library</p>
 <ul>
 <li>tools for file manipulation, command line argument parsing, and web access and parsing already exist and are robust</li>
@@ -11823,28 +11851,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Chapters">Chapters<a class="anchor-link" href="#Chapters">&#182;</a></h2><ol>
-<li><a href="chapter_1_rasterio.ipynb">Exploring the rasterio package for image analysis</a></li>
-<li><a href="chapter_2_indices.ipynb">Your first remote sensing vegetation index</a></li>
-<li><a href="chapter_3_visualization.ipynb">Plotting and visualizing your data with <code>matplotlib</code></a></li>
-<li><a href="chapter_4_vector.ipynb">Importing and using vector data -- the OGR library</a></li>
-<li><a href="chapter_5_classification.ipynb">Classification of land cover</a></li>
-<li><a href="chapter_6_spatial.ipynb">The spatial dimension - filters and segmentation</a></li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Other-resources">Other resources<a class="anchor-link" href="#Other-resources">&#182;</a></h2><p>There are many resources for doing remote sensing and GIS with Python on the web, but here are some of the better ones:</p>
 <ul>
-<li><a href="http://www.gis.usu.edu/~chrisg/python/2009/">Chris Garrard's course material from Utah State University</a></li>
-<li><a href="http://pcjericks.github.io/py-gdalogr-cookbook/">Python GDAL/OGR cookbook</a></li>
-<li><a href="http://www.gdal.org/gdal_tutorial.html">GDAL API tutorial</a></li>
-<li><a href="http://gdal.org/python/">Python API for GDAL</a></li>
+<li><a href="https://automating-gis-processes.github.io/2018/">Intro to Python Geoprocessing Course from CSC Finland</a></li>
+<li><a href="https://github.com/planetlabs/notebooks/tree/master/jupyter-notebooks">Planet Lab's jupyter notebooks</a></li>
+<li><a href="https://developers.google.com/earth-engine/edu">Google Earth Engine's tutorial reosources</a></li>
+<li><a href="https://github.com/sacridini/Awesome-Geospatial#python">almost comprehensive list of python geospatial tools</a></li>
+<li><a href="https://aws.amazon.com/earth/">Earth Observation data on Amazon AWS</a></li>
 </ul>
 
 </div>
@@ -11861,6 +11874,15 @@ div#notebook {
 </code></pre>
 <p>at the command line.</p>
 <p>Python 3 has many great new features (more informative stack traces, better unicode handling, <code>asyncio</code>, matrix algebra notation using <code>@</code>, and more) and is the future of the language. Unfortunately, some scientific packages (QGIS, for example) have not yet completed the transition away from Python 2. Unless you have good reason to use Python 2 (like if you're writing a QGIS plugin in Python), the general concensus is to recommend using Python 3.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The next chapter (link to <a href="chapter_1_rasterio.html">webpage</a> or <a href="chapter_1_rasterio.ipynb">Notebook</a>) introduces us to some basic scientific computing and raster management.</p>
 
 </div>
 </div>
