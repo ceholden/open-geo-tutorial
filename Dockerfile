@@ -25,12 +25,5 @@ RUN echo "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e541
 # Jupyter listens port: 8888
 EXPOSE 8888
 
-#ADD tutorial/ /opt/notebooks
-
 # Run Jupyter notebook as Docker main process
 CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/opt/notebooks", "--ip=0.0.0.0", "--port=8888", "--no-browser"]
-
-# jupyter notebook --allow-root --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser
-
-# docker built -t geo .
-# docker create -v /Users/clifgray/Documents/Code/:/opt/notebooks -it -p 8888:8888 --name geocont geoimg
