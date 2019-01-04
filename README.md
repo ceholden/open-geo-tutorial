@@ -15,17 +15,17 @@ software in Python (rasterio, shapely, GeoPandas, folium, etc). Notebooks cover 
 All chapters are available as jupyter notebooks in the notebooks/ directory or viewable via a normal web browser in HTML:
 
 0. Introduction
-   [[HTML](http://patrickgray.me/open-geo-tutorial/python/chapter_0_introduction.html)]
+   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_0_introduction.html)]
 1. The GDAL datatypes and objects
-   [[HTML](http://patrickgray.me/open-geo-tutorial/python/chapter_1_GDALDataset.html)]
+   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_1_GDALDataset.html)]
 2. Your first vegetation index
-   [[HTML](http://patrickgray.me/open-geo-tutorial/python/chapter_2_indices.html)]
+   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_2_indices.html)]
 3. Visualizing data
-   [[HTML](http://patrickgray.me/open-geo-tutorial/python/chapter_3_visualization.html)]
+   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_3_visualization.html)]
 4. Vector data - the OGR library
-   [[HTML](http://patrickgray.me/open-geo-tutorial/python/chapter_4_vector.html)]
+   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_4_vector.html)]
 5. Land cover classification
-   [[HTML](http://patrickgray.me/open-geo-tutorial/python/chapter_5_classification.html)]
+   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_5_classification.html)]
 6. More to come!!!
 
 I strongly recommend using docker and downloading the notebooks so you can play as you read along, otherwise you will quickly forget these tools.
