@@ -30,6 +30,17 @@ All chapters are available as jupyter notebooks in the notebooks/ directory or v
 
 I strongly recommend using docker and downloading the notebooks so you can play as you read along, otherwise you will quickly forget these tools.
 
+### Some of the things you'll learn:
+
+#### Raster Operations, Processing, and Visualization
+<img src="data/raster_viz.png" width="500">
+
+#### Interactive Shapefile and Raster Visualization
+ <img src="data/folium_exp.png" width="500">
+
+#### Machine Learning based Satellite Image Classification
+<img src="data/ml_exp.png" width="750">
+
 # Download
 
 Materials and data for these lessons are included inside this repository under
@@ -42,16 +53,6 @@ Two ways to download the entire repository include:
     * [Instructions](https://help.github.com/articles/cloning-a-repository/)
 * Downloading and extracting a ZIP file of the 'master' branch
     * [Download link](https://github.com/patrickcgray/open-geo-tutorial/archive/master.zip)
-
-A caution:
-
-> Be careful trying to "right-click" and save files from repositories on
-> Github, because this will save a HTML file linking to the file instead of
-> the file itself. This has been a common source of confusion among people,
-> especially if they are new to Github. It is possible to download individual
-> files from a Github repository website, and can be done by clicking on a
-> file listed on the repository site, and then clicking the "Download" button
-> at the top right of the next web page (also next to the "History" button).
 
 # Python Installation
 
