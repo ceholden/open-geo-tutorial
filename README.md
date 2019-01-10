@@ -9,6 +9,12 @@ Open Source Geoprocessing Tutorial
 </a><br />
 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"></a>
 
+# UPDATE
+Check out an updated and extended version of this tutorial written by @patrickcgray. It's amazing and uses more "Pythonic" `rasterio`/`fiona`/`shapely` libraries instead of `GDAL`/`OGR`/`OSR` directly. It's amazing!
+
+[patrickcgray/open-geo-tutorial](https://github.com/patrickcgray/open-geo-tutorial)
+
+# Introduction
 Tutorial of basic remote sensing and GIS methodologies using open source
 software (GDAL in Python). Tutorial covers workflow to perform image
 classification using machine learning classifiers:
