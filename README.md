@@ -17,7 +17,7 @@ All chapters are available as jupyter notebooks in the `notebooks/` directory or
 0. Introduction
    [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_0_introduction.html)]
 1. The GDAL datatypes and objects
-   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_1_GDALDataset.html)]
+   [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_1_rasterio.html)]
 2. Your first vegetation index
    [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_2_indices.html)]
 3. Visualizing data
