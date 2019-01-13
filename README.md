@@ -82,6 +82,6 @@ I highly recommend trying out [Docker](https://docs.docker.com/get-started/) if 
 
 which will pull the Dockerfile from the current location and create an OS image called 'open-geo' from it and then to create the container run this from the top of the git repo: 
 
-`docker run --name geo-cont -p 8888:8888 -v "$PWD:/opt/notebooks" -it open-geo` 
+`docker run --name geo-cont -e JUPYTER_NOTEBOOK_PASSWORD="foobar" -p 8888:8888 -v "$PWD:/opt/notebooks" -it open-geo` 
 
 which will start a container called 'geo-cont' based on the 'open-geo' image, then it will mount the repo directory to the container's /opt/notebooks directory where you can go access this repo's jupyter notebooks.
