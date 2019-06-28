@@ -26,7 +26,8 @@ All chapters are available as jupyter notebooks in the `notebooks/` directory or
    [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_4_vector.html)]
 5. Land cover classification
    [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_5_classification.html)]
-6. More to come!!!
+6. Deep Learning for land cover classification [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_6_neural_networks.html)]
+7. Earth Engine for Oceanographic Time Series Analysis [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_6_neural_networks.html)]
 
 I strongly recommend using docker and downloading the jupyter notebooks so you can play as you read along, otherwise you will quickly forget these tools.
 
@@ -61,19 +62,6 @@ the tutorial locally, you will need to install Python and the libraries used in
 the tutorials. This installation can be accomplished in many ways, but I will
 list the two most common approaches:
 
-### conda
-
-No matter what setup you have I recommend using the [Anaconda](http://conda.pydata.org/docs/) Python
-distribution to make installation of the tutorial dependencies less complicated.
-After [installing Anaconda or "miniconda" by following their
-instructions](http://conda.pydata.org/docs/install/quick.html), you can install
-the dependencies as follows:
-
-``` bash
-conda env create -f environment.yml
-source activate open-geo-tutorial
-```
-
 ### docker - recommended method
 
 I highly recommend trying out [Docker](https://docs.docker.com/get-started/) if you're not familiar with it. There is a bit of a startup time just for getting up to speed but it is the way to go for reproducible work. Docker provides operating-system-level virtualization, also known as "containerization" and thus you can be sure that your setup precisely replicates the one used here and will easily run everything. Once you've downloaded Docker you can simply cd into the cloned git repo and run: 
@@ -82,6 +70,18 @@ I highly recommend trying out [Docker](https://docs.docker.com/get-started/) if 
 
 which will pull the Dockerfile from the current location and create an OS image called 'open-geo' from it and then to create the container run this from the top of the git repo: 
 
-`docker run --name geo-cont -e JUPYTER_NOTEBOOK_PASSWORD="foobar" -p 8888:8888 -v "$PWD:/opt/notebooks" -it open-geo` 
+`docker run --name geo-cont -p 8888:8888 -v "$PWD:/opt/notebooks" -it open-geo` 
 
 which will start a container called 'geo-cont' based on the 'open-geo' image, then it will mount the repo directory to the container's /opt/notebooks directory where you can go access this repo's jupyter notebooks.
+
+### conda
+
+You can also run this repository using [Anaconda](http://conda.pydata.org/docs/) to make sure your python environment is isolated. After [installing Anaconda or "miniconda" by following their
+instructions](http://conda.pydata.org/docs/install/quick.html), you can install
+the dependencies as follows:
+
+``` bash
+conda create --name open-geo-tutorial
+source activate open-geo-tutorial
+pip install -r requirements.txt
+```
