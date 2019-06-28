@@ -27,7 +27,7 @@ All chapters are available as jupyter notebooks in the `notebooks/` directory or
 5. Land cover classification
    [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_5_classification.html)]
 6. Deep Learning for land cover classification [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_6_neural_networks.html)]
-7. Earth Engine for Oceanographic Time Series Analysis [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_6_neural_networks.html)]
+7. Earth Engine for Oceanographic Time Series Analysis [[HTML](http://patrickgray.me/open-geo-tutorial/chapter_7_earth_engine_oceanography.html)]
 
 I strongly recommend using docker and downloading the jupyter notebooks so you can play as you read along, otherwise you will quickly forget these tools.
 
